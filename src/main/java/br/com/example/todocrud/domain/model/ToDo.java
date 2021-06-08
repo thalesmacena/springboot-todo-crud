@@ -1,5 +1,24 @@
 package br.com.example.todocrud.domain.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+
+@Table(name = "todo")
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ToDo {
-  
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String title;
+    private String description;
+    private Boolean done;
+    private LocalDateTime create_date;
+    private LocalDateTime updatedDate;
 }
