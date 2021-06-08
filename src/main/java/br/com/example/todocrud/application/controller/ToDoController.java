@@ -1,7 +1,7 @@
 package br.com.example.todocrud.application.controller;
 
 import br.com.example.todocrud.domain.model.ToDo;
-import br.com.example.todocrud.domain.service.impl.ToDoService;
+import br.com.example.todocrud.domain.service.ToDoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
