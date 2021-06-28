@@ -14,8 +14,8 @@ public class ToDoController {
   private final ToDoService toDoService;
 
   // index
-    @GetMapping("/todo")
-    public ResponseEntity<List<ToDo>> getAllToDo(){
+  @GetMapping("/todo")
+  public ResponseEntity<List<ToDo>> getAllToDo(){
         return ResponseEntity.ok(toDoService.getAllToDo());
     }
 
@@ -32,22 +32,21 @@ public class ToDoController {
   }
 
   // put
-    @PutMapping("/todo/{id}")
-    public ResponseEntity<ToDo> updateToDo(@PathVariable Long id, @RequestBody ToDo toDo) {
+  @PutMapping("/todo/{id}")
+  public ResponseEntity<ToDo> updateToDo(@PathVariable Long id, @RequestBody ToDo toDo) {
         return ResponseEntity.ok(toDoService.updateToDo(id, toDo));
     }
 
   // patch
-    @PatchMapping("/todo/{id}")
-    public ResponseEntity<ToDo> completeToDo(@PathVariable Long id, @RequestBody Boolean done) {
-        return ResponseEntity.ok(toDoService.completeToDo(id,done));
-    }
+  @PatchMapping("/todo/{id}")
+  public ResponseEntity<ToDo> completeToDo(@PathVariable Long id, @RequestBody Boolean done) {
+      return ResponseEntity.ok(toDoService.completeToDo(id,done));
+  }
 
   // delete
-    @DeleteMapping("/todo/{id}")
-    public ResponseEntity deleteToDo(@PathVariable Long id) {
-        toDoService.deleteToDo(id);
-        return ResponseEntity.ok().build();
-    }
-
+  @DeleteMapping("/todo/{id}")
+  public ResponseEntity deleteToDo(@PathVariable Long id) {
+      toDoService.deleteToDo(id);
+      return ResponseEntity.ok().build();
+  }
 }

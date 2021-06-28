@@ -1,6 +1,7 @@
 package br.com.example.todocrud.domain.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,6 +21,6 @@ public class ToDo {
     private String title;
     private String description;
     private Boolean done;
-    private LocalDateTime create_date;
+    private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 }
