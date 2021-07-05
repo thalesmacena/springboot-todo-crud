@@ -27,7 +27,7 @@ This is a small example of how to create a To Do List CRUD Rest API using Spring
 
 <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/-Maven-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=apache-maven&logoColor=2D325E" alt="Maven"></a>
 
-<a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/-Spring-Boot-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=spring-boot&logoColor=2D325E" alt="Node.js"></a>
+<a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/-SpringBoot-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=spring-boot&logoColor=2D325E" alt="Spring Boot"></a>
 
 <a href="https://en.wikipedia.org/wiki/Java_(programming_language"><img src="https://img.shields.io/badge/-Java-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=java&logoColor=2D325E" alt="Java"></a>
 
