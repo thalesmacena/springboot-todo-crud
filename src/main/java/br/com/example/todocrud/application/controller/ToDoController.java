@@ -3,13 +3,14 @@ package br.com.example.todocrud.application.controller;
 import br.com.example.todocrud.domain.model.ToDo;
 import br.com.example.todocrud.domain.service.ToDoService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ToDoController {
   private final ToDoService toDoService;
 
