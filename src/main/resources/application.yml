@@ -3,6 +3,16 @@ spring:
     url: jdbc:postgresql://localhost:5432/todo
     username: postgres
     password: password
-#spring
+  redis:
+    host: 'localhost'
+    timeout: 10000
+  cache:
+    redis:
+      time-to-live: 300
+      use-key-prefix: true
+    type: redis
   jpa:
     show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update

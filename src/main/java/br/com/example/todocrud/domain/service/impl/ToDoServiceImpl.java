@@ -45,7 +45,7 @@ public class ToDoServiceImpl implements ToDoService {
     public ToDo updateToDo(Long id, ToDo todo) {
         Optional<ToDo> toDoOptional = toDoRepository.findById(id);
 
-        if (!toDoOptional.isPresent()) {
+        if (toDoOptional.isEmpty()) {
             throw new ToDoNotFoundException(id.toString());
         }
 
@@ -67,7 +67,7 @@ public class ToDoServiceImpl implements ToDoService {
     public ToDo completeToDo(Long id, Boolean done) {
         Optional<ToDo> toDoOptional = toDoRepository.findById(id);
 
-        if (!toDoOptional.isPresent()) {
+        if (toDoOptional.isEmpty()) {
             throw new ToDoNotFoundException(id.toString());
         }
 
@@ -88,7 +88,7 @@ public class ToDoServiceImpl implements ToDoService {
     @Override
     @Transactional
     public void deleteToDo(Long id) {
-        if (toDoRepository.findById(id).isPresent()) {
+        if (toDoRepository.findById(id).isEmpty()) {
             throw new ToDoNotFoundException(id.toString());
         }
 
