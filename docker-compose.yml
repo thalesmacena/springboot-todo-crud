@@ -1,0 +1,28 @@
+version: '3'
+services:
+  redis:
+    container_name: redistodo
+    image: redis
+    ports:
+    - "6379:6379"
+    volumes:
+    - /data/redis:/data
+  postgres:
+    container_name: postgrestodo
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "password"
+    ports:
+      - "5432:5432"
+    volumes:
+      - /data/database:/var/lib/postgresql/data   
+  pgadmin:
+    container_name: pgadmintodo
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "example@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+    ports:
+      - "15432:80"
+    depends_on:
+      - postgres
