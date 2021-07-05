@@ -45,7 +45,10 @@ This is a small example of how to create a To Do List CRUD Rest API using Spring
 
 **Prerequisites**
 -java jdk 11
--docker
+
+-Maven
+
+-Docker
 
 **Run**
 ```PowerShell
